@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Playfair+Display+SC:wght@900&family=Prata&display=swap');
+body html{
+
+    /*
+    font-family: 'Prata', serif; >>> main font for general text
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display SC', serif; >>> SansSerifBookFLF (Use light or medium)
+    font-weight : 300; (Light)  >>> SansSerifBookFLF (relative name on figma)
+    font-weight : 500; (medium) >>> SansSerifBldFLFCond (relative name on figma)
+    */
+    font-family: 'Prata', serif;
+}
+
+.bg-blue{
+    background-color: #001D6E;
+    
+}
