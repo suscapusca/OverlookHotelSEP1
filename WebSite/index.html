@@ -11,48 +11,114 @@
 </head>
 
 <body>
-    <nav class="position-relative navbar navbar-expand-lg bg-blue">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="./images/icons/hotelIconWhite.jpg" id="iconHotel" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    <nav class="navbar navbar-expand-lg bg-blue p-0">
+        <div class="container-fluid p-0 border-0">
+            <a class="navbar-brand p-0" href="#"><img src="./images/icons/hotelIconWhite.jpg" alt=""></a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-menu"><img src="./images/icons/HamburgerWhite.png" alt="Hamburger menu"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
+            <div class="container p-0 m-0">
+                <div class="row h-50">
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white active-page" aria-current="page" href="#">Home</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white" href="#">Rooms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Booking</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Contact us</a>
+                            </li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                    </div>
+                </div>
+                <div class="row d-none d-lg-block h-50 bg-white">
+                    <div class="row">
+                        <div class="col-3 d-flex align-items-center">
+                            <span class="font-SansSerifBldFLFCond text-blue">CALL US
+                                NOW</span>
+                        </div>
+                        <div class="col-3 d-flex align-items-center">
+                            <p class="text-blue">From</p>
+                            <div id="today-date">
+                                <h4 class="fs-6 text-blue">SUNDAY</h4>
+                                <p class="fs-3">15 May</p>
+                            </div>
+                        </div>
+                        <div class="col-3 d-flex align-items-center">
+                            <p class="text-blue">To</p>
+                            <div id="tomorrow-date">
+                                <h4 class="fs-6 text-blue">MONDAY</h4>
+                                <p class="fs-3">16 May</p>
+                            </div>
+                        </div>
+                        <div class="col-3 d-flex align-items-center ">
+                            <p class="text-blue font-SansSerifBldFLFCond">BOOK NOW</p>
+
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </nav>
 
+    <div class="spacing">
+        <ul class="list text-center">
+            <li>
+                <h3 class="text-blue font-SanSerifBook fs-6">ADRESS</h3>
+                <p class="fs-4">Banegårdsgade 2, Horsens (DK)</p>
+            </li>
+            <li class="mt-5">
+                <h3 class="text-blue font-SanSerifBook fs-6">TELEPHONE</h3>
+                <p class="fs-4">+45 00 00 00 00</p>
+            </li>
+            <li class="mt-5">
+                <h3 class="text-blue font-SanSerifBook fs-6">EMAIL</h3>
+                <p class="fs-4">00000@via.dk</p>
+            </li>
+            <li class="mt-5">
+                <h3 class="text-blue font-SanSerifBook">FOLLOW US</h3>
+                <div class="social-icon-container">
+                    <a target="_blank" href="https://www.facebook.com/"><img class="" src="./images/icons/facebook.png"
+                            alt="facebook icon"></a>
+                    <a target="_blank" href="https://www.tripadvisor.com/"><img src="./images/icons/tripadvisor.png"
+                            alt="tripadvisor icon"></a>
+                    <a target="_blank"
+                        href="https://www.google.com/maps/place/VIA+University+Campus+Horsens/@55.8635637,9.8379843,15z/data=!4m5!3m4!1s0x0:0xa65113d28ba174ba!8m2!3d55.8635637!4d9.8379843?sa=X&ved=2ahUKEwj-iKCnke73AhVwiv0HHW7nDLEQ_BJ6BAhVEAU">
+                        <img src="./images/icons/google-maps.png" alt="maps icon"></a>
+                    <a target="_blank" href="https://www.instagram.com/"><img src="./images/icons/instagram.png"
+                            alt="instagram icon"></a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="container mt-5 col text-center">
+            <div class="row">
+                <div class="col">
+                    <p class="font-small">ⒸCopyright all right reserved 2022.
+                        Group7</p>
+                </div>
+
+                <div class="col text-center text-blue">
+                    <p class="font-small">
+                        HERE'S COOKIE 🍪<br>
+                        P.S: WE WANT A 12
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 

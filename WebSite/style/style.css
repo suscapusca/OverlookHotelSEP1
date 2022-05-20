@@ -1,18 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Playfair+Display+SC:wght@900&family=Prata&display=swap');
-body html{
+body, html{
 
     /*
     font-family: 'Prata', serif; >>> main font for general text
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Playfair Display SC', serif; >>> SansSerifBookFLF (Use light or medium)
+    font-family: 'Open Sans', sans-serif; >>> SansSerif (Use light or medium)
     font-weight : 300; (Light)  >>> SansSerifBookFLF (relative name on figma)
     font-weight : 500; (medium) >>> SansSerifBldFLFCond (relative name on figma)
     */
     font-family: 'Prata', serif;
     color:#454545 ;
+    overflow-x: hidden;
 }
 
+ul {
+    list-style-type: none;
+  }
+  a{
+      text-decoration: none;
+      color:#454545;
+  }
+
 .bg-blue{
-    background-color: #001D6E;
+    background-color: #001D6E;  
+}
+
+.text-blue{
+    color: #001D6E;  
+}
+
+.font-SanSerifBook{
+    font-family: 'Open Sans', sans-serif;
+    font-weight : 300;
+}
+
+.font-SansSerifBldFLFCond{
+    font-family: 'Open Sans', sans-serif;
+    font-weight : 500;
+}
+
+.social-icon-container{
+display: flex;
+justify-content: space-around;
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .navbar-brand {
+        flex: 0 1 auto;
+        display: block;
+        width: 90px;
+        height: 90px; 
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: translateX(-50%);
+        text-align: center;
+      }
     
+    .navbar-brand img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    
+      .navbar-menu img{
+        max-height: 50px;
+        max-width: 50px;
+      }
+
+    .spacing-small{
+        margin-top: 41px !important;
+        }
+
+    .spacing{
+        margin-top: 100px !important;
+        }
+
+    .social-icon-container img{
+        max-width: 30px;
+    }
+
+    .font-small{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    
+    .navbar-brand img {
+        max-width: 115px;
+      }
+      
+      .active-page::after{
+        content: "";
+        display: inline-block;
+        position: relative;
+        padding: 0.25em;
+        color: rgb(255, 255, 255);
+      }
+
+    .spacing-small{
+        margin-top: 115px !important;
+        }
+
+    .spacing{
+        margin-top: 220px !important;
+        }
+
+    .social-icon-container img{
+        max-width: 30px;
+    }
+
+    .font-small{
+        font-size: 10px;
+    }
+
+    .nav-icons{
+        max-width: 50px;
+    }
+
+    .text-middle{
+        height:100px;
+        line-height:100px
+    }
 }
