@@ -9,6 +9,7 @@ body html{
     font-weight : 500; (medium) >>> SansSerifBldFLFCond (relative name on figma)
     */
     font-family: 'Prata', serif;
+    color:#454545 ;
 }
 
 .bg-blue{
