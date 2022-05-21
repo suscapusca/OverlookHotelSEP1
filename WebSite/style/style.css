@@ -9,7 +9,6 @@ body, html{
     */
     font-family: 'Prata', serif;
     color:#454545 ;
-    overflow-x: hidden;
 }
 
 ul {
@@ -49,8 +48,7 @@ justify-content: space-around;
     .navbar-brand {
         flex: 0 1 auto;
         display: block;
-        width: 90px;
-        height: 90px; 
+        width: 76px; 
         position: absolute;
         left: 50%;
         top: 0;
@@ -89,18 +87,11 @@ justify-content: space-around;
 
 @media only screen and (min-width: 992px) {
 
-    
-    .navbar-brand img {
-        max-width: 115px;
-      }
-      
-      .active-page::after{
-        content: "";
-        display: inline-block;
-        position: relative;
-        padding: 0.25em;
-        color: rgb(255, 255, 255);
-      }
+    .nav-height{
+        height:150px ;
+    }
+
+
 
     .spacing-small{
         margin-top: 115px !important;
@@ -111,7 +102,7 @@ justify-content: space-around;
         }
 
     .social-icon-container img{
-        max-width: 30px;
+        max-width: 50px;
     }
 
     .font-small{
