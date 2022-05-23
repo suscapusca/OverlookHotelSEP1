@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hoteloverlookjavafx.Controllers.RoomController">
+   <children>
+      <Pane layoutX="-10.0" layoutY="-1.0" prefHeight="109.0" prefWidth="854.0" style="-fx-background-color: #33ccff;">
+         <children>
+            <Label layoutX="324.0" layoutY="26.0" text="Rooms" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Italic" size="50.0" />
+               </font>
+            </Label>
+            <Button layoutX="766.0" layoutY="26.0" mnemonicParsing="false" onAction="#switchToHome" style="-fx-background-color: #33ccff;">
+               <graphic>
+                  <FontAwesomeIcon glyphName="BOOK" selectionFill="BLACK" size="50" />
+               </graphic>
+            </Button>
+            <Button layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#switchToHome" style="-fx-background-color: #33ccff;">
+               <graphic>
+                  <FontAwesomeIcon glyphName="ARROW_LEFT" selectionFill="BLACK" size="50" />
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

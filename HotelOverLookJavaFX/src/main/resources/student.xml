@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<guests>
+    <guest>
+        <name>Kristians</name>
+        <phone>dwajndawuodwjawd</phone>
+        <birthday>
+            <day>11</day>
+            <month>5</month>
+            <year>2022</year>
+        </birthday>
+        <address>Stefansgade 4</address>
+        <nationality>Lithuanian</nationality>
+    </guest>
+</guests>

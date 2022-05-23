@@ -1,0 +1,15 @@
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<guests>
+    <guest>
+        <name>dawdaw</name>
+        <phone>dawdaw</phone>
+        <birthday>
+            <day>11</day>
+            <month>5</month>
+            <year>2022</year>
+        </birthday>
+        <address></address>
+        <nationality></nationality>
+    </guest>
+</guests>
