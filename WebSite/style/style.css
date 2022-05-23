@@ -118,3 +118,14 @@ justify-content: space-around;
         line-height:100px
     }
 }
+
+.marginLeft25{
+    margin-top: 20px;
+   margin-left: 10%;
+}
+
+.marginLeftRight{
+    margin-top: 20px;
+    margin-left: auto;
+     margin-right: 10%;
+ }
