@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Playfair+Display+SC:wght@900&family=Prata&display=swap');
-body, html{
+
+body,
+html {
 
     /*
     font-family: 'Prata', serif; >>> main font for general text
@@ -8,38 +10,39 @@ body, html{
     font-weight : 500; (medium) >>> SansSerifBldFLFCond (relative name on figma)
     */
     font-family: 'Prata', serif;
-    color:#454545 ;
+    color: #454545;
 }
 
 ul {
     list-style-type: none;
-  }
-  a{
-      text-decoration: none;
-      color:#454545;
-  }
-
-.bg-blue{
-    background-color: #001D6E;  
 }
 
-.text-blue{
-    color: #001D6E;  
+a {
+    text-decoration: none;
+    color: #454545;
 }
 
-.font-SanSerifBook{
+.bg-blue {
+    background-color: #001D6E;
+}
+
+.text-blue {
+    color: #001D6E;
+}
+
+.font-SanSerifBook {
     font-family: 'Open Sans', sans-serif;
-    font-weight : 300;
+    font-weight: 300;
 }
 
-.font-SansSerifBldFLFCond{
+.font-SansSerifBldFLFCond {
     font-family: 'Open Sans', sans-serif;
-    font-weight : 500;
+    font-weight: 500;
 }
 
-.social-icon-container{
-display: flex;
-justify-content: space-around;
+.social-icon-container {
+    display: flex;
+    justify-content: space-around;
 }
 
 
@@ -48,7 +51,7 @@ justify-content: space-around;
     .navbar-brand {
         flex: 0 1 auto;
         display: block;
-        width: 76px; 
+        width: 76px;
         position: absolute;
         left: 50%;
         top: 0;
@@ -56,81 +59,164 @@ justify-content: space-around;
         padding: 0 !important;
         transform: translateX(-50%);
         text-align: center;
-      }
-    
+    }
+
     .navbar-brand img {
         max-height: 100%;
         max-width: 100%;
-      }
-    
-      .navbar-menu img{
+    }
+
+    .navbar-menu img {
         max-height: 50px;
         max-width: 50px;
-      }
+    }
 
-    .spacing-small{
+    .spacing-small {
         margin-top: 41px !important;
-        }
+    }
 
-    .spacing{
+    .spacing {
         margin-top: 100px !important;
-        }
+    }
 
-    .social-icon-container img{
+    .social-icon-container img {
         max-width: 30px;
     }
 
-    .font-small{
+    .font-small {
         font-size: 10px;
     }
 }
 
 @media only screen and (min-width: 992px) {
 
-    .nav-height{
-        height:150px ;
+    .nav-height {
+        height: 150px;
     }
 
 
 
-    .spacing-small{
+    .spacing-small {
         margin-top: 115px !important;
-        }
+    }
 
-    .spacing{
+    .spacing {
         margin-top: 220px !important;
-        }
+    }
 
-    .social-icon-container img{
+    .social-icon-container img {
         max-width: 50px;
     }
 
-    .font-small{
+    .font-small {
         font-size: 10px;
     }
 
-    .nav-icons{
+    .nav-icons {
         max-width: 50px;
     }
 
-    .text-middle{
-        height:100px;
-        line-height:100px
+    .text-middle {
+        height: 100px;
+        line-height: 100px
     }
 }
 
-.marginLeft25{
+.marginLeft25 {
     margin-top: 20px;
-   margin-left: 10%;
+    margin-left: 10%;
 }
 
-.marginLeftRight{
+.marginLeftRight {
     margin-top: 20px;
     margin-left: auto;
-     margin-right: 10%;
- }
+    margin-right: 10%;
+}
 
- .paddingLeft{
-     padding-left: 30%;
- }
+.paddingLeft {
+    padding-left: 30%;
+}
 
+
+.carouselNextBox {
+    position: absolute;
+    bottom: 22%;
+    height: 15%;
+    background-color: #001D6E;
+    width: 60%;
+    text-align: center;
+    left: 20%;
+    color: white;
+    border-radius: 10px;
+ 
+}
+
+.marginTopCarouselText {
+    margin-top: 10%;
+}
+.marginTopNameCarousel{
+    margin-top: 4%;
+}
+@media only screen and (max-width: 880px) {
+    .heightBlueBox{
+        height: 15%;
+        bottom: 24%;
+    }
+    .marginTopDescriptionCarousel{
+        margin-top: 3%;
+    }
+}
+@media only screen and (max-width: 710px) {
+    .heightBlueBox{
+        height: 18%;
+        bottom: 30%;
+    }
+    .marginTopDescriptionCarousel{
+        margin-top: 3%;
+    }
+}
+@media only screen and (max-width: 510px) {
+    .heightBlueBox{
+        height: 18%;
+        bottom: 40%;
+    }
+    .marginTopDescriptionCarousel{
+        margin-top: 20%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .heightBlueBox{
+        height: 18%;
+        bottom: 50%;
+    }
+    .marginTopDescriptionCarousel{
+        margin-top: 20%;
+    }
+}
+.mtText1{
+    margin-top: 8.5%;
+}
+.mtText2{
+    margin-top: 7%;
+}
+
+
+.marginTopNameCarousel2{
+    margin-top: 4%;
+}
+.carouselNextBox2{
+
+}
+
+
+.carouselNextBox2 {
+    position: absolute;
+    bottom: 10%;
+    height: 10%;
+    background-color: #001D6E;
+    width: 60%;
+    text-align: center;
+    left: 20%;
+    color: white;
+    border-radius: 10px;
+}
