@@ -26,10 +26,13 @@
             </Button>
          </children>
       </Pane>
-      <TableView layoutY="109.0" prefHeight="460.0" prefWidth="845.0">
+      <TableView layoutY="109.0" fx:id="table" prefHeight="460.0" prefWidth="845.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn fx:id="nameColumn" prefWidth="175.0" text="Name" />
+            <TableColumn fx:id="phoneColumn" prefWidth="175.0" text="Phone" />
+            <TableColumn fx:id="addressColumn" prefWidth="175.0" text="Address" />
+            <TableColumn fx:id="nationalityColumn" prefWidth="175.0" text="Nationality" />
+            <TableColumn fx:id="birthdayColumn" prefWidth="175.0" text="Birthday" />
         </columns>
       </TableView>
    </children>

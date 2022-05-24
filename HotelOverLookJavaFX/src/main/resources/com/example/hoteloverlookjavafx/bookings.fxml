@@ -26,5 +26,16 @@
             </Button>
          </children>
       </Pane>
+      <TableView layoutY="109.0" prefHeight="461.0" prefWidth="845.0">
+        <columns>
+          <TableColumn prefWidth="196.59999084472656" text="Guest" />
+          <TableColumn minWidth="6.20001220703125" prefWidth="69.80001831054688" text="Room Nº" />
+            <TableColumn prefWidth="83.4000244140625" text="Arrival Date" />
+            <TableColumn prefWidth="96.0" text="Departure Date" />
+            <TableColumn prefWidth="71.79998779296875" text="Nº Guests" />
+            <TableColumn prefWidth="216.4000244140625" text="Extra information" />
+            <TableColumn prefWidth="75.0" text="State" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

@@ -8,6 +8,12 @@ public class Booking {
     private String extraInfo;
     private float totalPrice;
     private int nightsSpent;
+    private enum state{
+        PENDING,
+        BOOKED,
+        ARRIVED,
+        CLOSED
+    };
 
     //basic constructor
     public Booking(Guest g, DateInterval dI, Room r, int guests){

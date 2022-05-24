@@ -5,6 +5,10 @@ public class Date {
     private int month;
     private int year;
 
+    public Date(){
+
+    }
+
     //constructor
     public Date(int d, int m, int y){
         this.day = d;
