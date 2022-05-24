@@ -1,14 +1,27 @@
 package com.example.hoteloverlookjavafx.Models;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "booking")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Booking {
+    @XmlElement(name = "guest")
     private Guest guest;
+    @XmlElement(name = "dateInterval")
     private DateInterval dateInterval;
+    @XmlElement(name = "room")
     private Room room;
     private int guests;
     private String extraInfo;
     private float totalPrice;
     private int nightsSpent;
-    private enum state{
+    private String state;
+    @XmlElement(name = "extra")
+    private Extra extra;
+    private enum stateEnum{
         PENDING,
         BOOKED,
         ARRIVED,
@@ -16,29 +29,32 @@ public class Booking {
     };
 
     //basic constructor
-    public Booking(Guest g, DateInterval dI, Room r, int guests){
+    public Booking(Guest g, DateInterval dI, Room r, int guests, String state){
         this.guest = g;
         this.dateInterval = dI;
         this.room = r;
         this.guests = guests;
+        this.state = state;
     }
 
     //constructor with extra info
-    public Booking(Guest g, DateInterval dI, Room r, int guests, String eI){
+    public Booking(Guest g, DateInterval dI, Room r, int guests, String eI, String state){
         this.guest = g;
         this.dateInterval = dI;
         this.room = r;
         this.guests = guests;
         this.extraInfo = eI;
+        this.state = state;
     }
 
     //function to update Booking
-    public void updateBooking(Guest g, DateInterval dI, Room r, int guests, String eI){
+    public void updateBooking(Guest g, DateInterval dI, Room r, int guests, String eI, String state){
         this.guest = g;
         this.dateInterval = dI;
         this.room = r;
         this.guests = guests;
         this.extraInfo = eI;
+        this.state = state;
     }
 
     public Guest getGuest() {
@@ -95,5 +111,21 @@ public class Booking {
 
     public void setNightsSpent(int nightsSpent) {
         this.nightsSpent = nightsSpent;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public Extra getExtra() {
+        return extra;
+    }
+
+    public void setExtra(Extra extra) {
+        this.extra = extra;
     }
 }

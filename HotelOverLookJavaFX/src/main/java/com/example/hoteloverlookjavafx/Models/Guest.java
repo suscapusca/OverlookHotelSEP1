@@ -4,7 +4,6 @@ package com.example.hoteloverlookjavafx.Models;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlRootElement;
-import javafx.beans.value.ObservableValue;
 
 @XmlRootElement(name = "guest")
 @XmlAccessorType(XmlAccessType.FIELD)

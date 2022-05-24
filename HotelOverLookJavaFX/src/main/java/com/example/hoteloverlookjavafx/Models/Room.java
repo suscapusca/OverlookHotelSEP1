@@ -6,7 +6,6 @@ public class Room {
     private String type;
     private int beds;
     private int bedRooms;
-    private Extra extra;
 
     //basic constructor
     public Room(int n, float p, String t, int b, int bR){
@@ -17,16 +16,6 @@ public class Room {
         this.bedRooms = bR;
     }
 
-    //constructor if room has extra
-    public Room(int n, float p, String t, int b, int bR, Extra e){
-        this.number = n;
-        this.price = p;
-        this.type = t;
-        this.beds = b;
-        this.bedRooms = bR;
-        this.extra = e;
-    }
-
     //function to change room info
     private void changeRoomInfo(int n, float p, String t, int b, int bR){
         this.number = n;
@@ -34,10 +23,6 @@ public class Room {
         this.type = t;
         this.beds = b;
         this.bedRooms = bR;
-    }
-
-    private void putExtra(Extra e){
-        this.extra = e;
     }
 
     //GET AND SETTERS

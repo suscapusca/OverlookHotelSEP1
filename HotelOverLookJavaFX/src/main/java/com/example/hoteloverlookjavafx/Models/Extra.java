@@ -1,35 +1,40 @@
 package com.example.hoteloverlookjavafx.Models;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "extra")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Extra {
-    private int extraBed;
-    private boolean extraSmoke;
+    private float priceExtra;
+    private String extras;
 
     //basic constructor
-    public Extra(int eB, boolean eS){
-        this.extraBed = eB;
-        this.extraSmoke = eS;
+    public Extra(float eB, String eS){
+        this.priceExtra = eB;
+        this.extras = eS;
     }
 
-    public void changeExtras(int eB, boolean eS){
-        this.extraBed = eB;
-        this.extraSmoke = eS;
+    public void changeExtras(float eB, String eS){
+        this.priceExtra = eB;
+        this.extras = eS;
     }
 
-    //GET AND SETTERS
-    public int getExtraBed() {
-        return extraBed;
+
+    public float getPriceExtra() {
+        return priceExtra;
     }
 
-    public void setExtraBed(int extraBed) {
-        this.extraBed = extraBed;
+    public void setPriceExtra(float priceExtra) {
+        this.priceExtra = priceExtra;
     }
 
-    public boolean isExtraSmoke() {
-        return extraSmoke;
+    public String getExtras() {
+        return extras;
     }
 
-    public void setExtraSmoke(boolean extraSmoke) {
-        this.extraSmoke = extraSmoke;
+    public void setExtras(String extras) {
+        this.extras = extras;
     }
-
 }

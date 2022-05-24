@@ -66,4 +66,15 @@
         <address>Pila</address>
         <nationality>Acores</nationality>
     </guest>
+    <guest>
+        <name>Bruno is dumb af</name>
+        <phone>no number, he is idiot</phone>
+        <birthday>
+            <day>29</day>
+            <month>5</month>
+            <year>1987</year>
+        </birthday>
+        <address>Streets</address>
+        <nationality>Lithuania</nationality>
+    </guest>
 </guests>

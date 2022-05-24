@@ -14,16 +14,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
 
 public class CrudGuestController {
-    @FXML
-    TextField nameField;
+    @FXML TextField nameField;
     @FXML TextField phoneField;
     @FXML TextField addressField;
     @FXML TextField nationalityField;
@@ -55,18 +53,9 @@ public class CrudGuestController {
         }
     }
 
-    //Change to Guest view
-    public void switchToGuests(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(OverLookApplication.class.getResource("guests.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
     //Change to Home view
     public void switchToHome(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(OverLookApplication.class.getResource("home.fxml"));
+        root = FXMLLoader.load(OverLookApplication.class.getResource("guests.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

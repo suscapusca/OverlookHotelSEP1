@@ -1,8 +1,16 @@
 package com.example.hoteloverlookjavafx.Models;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
 import java.util.ArrayList;
 
+@XmlRootElement(name = "bookings")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class BookingList {
+    @XmlElement(name = "booking")
     private ArrayList<Booking> bookings;
 
     public BookingList(){
