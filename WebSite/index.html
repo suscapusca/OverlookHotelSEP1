@@ -34,17 +34,23 @@
                                 src="./images/icons/telephoneBlack.png" alt="Telephone Icon"></a>
                     </div>
 
-                    <div class="col-auto d-flex align-items-center justify-content-center p-2 pe-3 ">
+                    <div class="col-auto d-flex align-items-center justify-content-center p-2 pe-3 position-relative ">
                         <p class="text-blue pe-3">From</p>
-                        <div id="today-date">
+                        <div class="today-date">
                         </div>
                         <img src="./images/icons/calendar.png" alt="Calendar icon" class="nav-icons">
+
+                        <input class="position-absolute date-picker" type="date" id="start-date-input" name="trip-start"
+                            onchange="changeStartDate(event)">
                     </div>
-                    <div class="col-auto d-flex align-items-center justify-content-center p-2 pe-3">
+                    <div class="col-auto d-flex align-items-center justify-content-center p-2 pe-3 position-relative">
                         <p class="text-blue pe-3">To</p>
-                        <div id="tomorrow-date">
+                        <div class="tomorrow-date">
                         </div>
                         <img src="./images/icons/calendar.png" alt="Calendar icon" class="nav-icons">
+
+                        <input class="position-absolute date-picker" type="date" id="end-date-input" name="trip-start"
+                            onchange="changeEndDate(event)">
                     </div>
                     <div class="col-3  d-flex justify-content-center align-items-center">
                         <a href="booking.html" class="fs-6 align-middle">BOOK NOW </a>
@@ -88,15 +94,15 @@
         </div>
     </header>
     <div class="mb-5">
-      
+
         <img src="./images/StanleyOutside.jpg" class="d-block w-100" alt="...">
-    
+
     </div>
     <div class="mt-5 ">
         <p class=" mtText2 text-center h1 font-SanSerifBook">
             a welcoming, luxurious and<br>
             traditional environment<br>
-             to feel like home 
+            to feel like home
         </p>
         <p class="mtText1 text-center h1 text-blue font-SanSerifBook">
             THE ROOMS
@@ -109,7 +115,7 @@
     </div>
 
 
-    
+
     <div class="carouselBox mtText1">
         <div id="carouselExampleInterval1" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -119,7 +125,7 @@
                         <div class="marginTopNameCarousel2">
                             <p class="h4">Single Suit</p>
                         </div>
-                        
+
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -131,7 +137,7 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    <div class="marginTopCarouselText">         
+                    <div class="marginTopCarouselText">
                     </div>
                 </div>
             </div>
@@ -143,10 +149,11 @@
                 FEEL LIKE HOME
             </p>
             <p class="mt-5 text-center h2 font-SanSerifBook">
-            all our rooms are well equipped with all the necessary,<br>
-             and if you have special need just ask our welcoming team members they will accomplish all your <br>requirements
+                all our rooms are well equipped with all the necessary,<br>
+                and if you have special need just ask our welcoming team members they will accomplish all your
+                <br>requirements
             </p>
-            
+
         </div>
     </div>
     <div class="carouselBox">
@@ -157,48 +164,50 @@
             <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner mt-5">
                     <div class="carousel-item active" data-bs-interval="20000">
-                        <img src="./images/rooms/page_suitec8b7462-buona2.jpg" class="d-block w-100" height="10%" alt="...">
+                        <img src="./images/rooms/page_suitec8b7462-buona2.jpg" class="d-block w-100" height="10%"
+                            alt="...">
                         <div class="carouselNextBox2">
                             <div class="marginTopNameCarousel2">
                                 <p class="h4">RECEPTION</p>
                             </div>
-                            
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval2"
-                                data-bs-slide="prev">
+
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval2"
-                                data-bs-slide="next">
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleInterval2" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        <div class="marginTopCarouselText">         
+                        <div class="marginTopCarouselText">
                         </div>
                     </div>
                     <div class="carousel-item active" data-bs-interval="20000">
-                        <img src="./images/rooms/page_suitec8b7462-buona2.jpg" class="d-block w-100" height="10%" alt="...">
+                        <img src="./images/rooms/page_suitec8b7462-buona2.jpg" class="d-block w-100" height="10%"
+                            alt="...">
                         <div class="carouselNextBox2">
                             <div class="marginTopNameCarousel2">
                                 <p class="h4">RESTAURANT</p>
                             </div>
-                            
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval2"
-                                data-bs-slide="prev">
+
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval2"
-                                data-bs-slide="next">
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleInterval2" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        <div class="marginTopCarouselText">         
+                        <div class="marginTopCarouselText">
                         </div>
-                    </div>            
-                </div>     
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -210,48 +219,50 @@
             <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner mt-5">
                     <div class="carousel-item active" data-bs-interval="20000">
-                        <img src="./images/rooms/page_suitec8b7462-buona2.jpg" class="d-block w-100" height="10%" alt="...">
+                        <img src="./images/rooms/page_suitec8b7462-buona2.jpg" class="d-block w-100" height="10%"
+                            alt="...">
                         <div class="carouselNextBox2">
                             <div class="marginTopNameCarousel2">
                                 <p class="h4">RECEPTION</p>
                             </div>
-                            
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval2"
-                                data-bs-slide="prev">
+
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval2"
-                                data-bs-slide="next">
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleInterval2" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        <div class="marginTopCarouselText">         
+                        <div class="marginTopCarouselText">
                         </div>
                     </div>
                     <div class="carousel-item active" data-bs-interval="20000">
-                        <img src="./images/rooms/page_suitec8b7462-buona2.jpg" class="d-block w-100" height="10%" alt="...">
+                        <img src="./images/rooms/page_suitec8b7462-buona2.jpg" class="d-block w-100" height="10%"
+                            alt="...">
                         <div class="carouselNextBox2">
                             <div class="marginTopNameCarousel2">
                                 <p class="h4">RESTAURANT</p>
                             </div>
-                            
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval2"
-                                data-bs-slide="prev">
+
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval2"
-                                data-bs-slide="next">
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleInterval2" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                        <div class="marginTopCarouselText">         
+                        <div class="marginTopCarouselText">
                         </div>
-                    </div>            
-                </div>     
+                    </div>
+                </div>
             </div>
         </div>
     </div>
