@@ -1,19 +1,10 @@
 //Check if 2 dates are overlapping (date must be an object with check-in as start date and check-out as ending date)
-function isOverlapping(date1, date2) {
-  date1Start = date1.checkIn;
-  date1End = date1.checkOut;
 
-  date2Start = date2.checkIn;
-  date2End = date2.checkOut;
+const date1 = new Date("1997-11-20");
 
-  if (!(date1End >= date2Start && date1Start <= date2End)) {
-    console.log("not overlapping");
-    return false;
-  } else console.log("Overlapping");
-  return true;
-}
+console.log(date1);
 
-function filterList(filter) {
+/* function filterList(filter) {
   var filtered = roomList.filter((room) => {
     return room != filter;
   });
@@ -28,14 +19,7 @@ function rooms() {
 
 const d = new Date();
 const tomorrow = new Date();
-tomorrow.setDate(tomorrow.getDate() + 1);
-
-let UserInput = {
-  checkIn: d,
-  checkOut: tomorrow,
-};
-
-console.log(UserInput["checkIn"], UserInput["checkOut"], "hello");
+tomorrow.setDate(tomorrow.getDate() + 1); */
 
 //if (endD >= startdate && startD <= enddate) // comparing dates
 
