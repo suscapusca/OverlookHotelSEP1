@@ -26,6 +26,11 @@ const weekName = [
 const d = new Date();
 const tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
+
+let UserInput = {
+  "check-in": d,
+  "check-out": tomorrow,
+};
 let startDate = d;
 let endDate;
 
@@ -107,3 +112,35 @@ $("#start-date").click(function () {
 $(document).ready(function () {
   setBaseDates();
 });
+
+function getBooking() {
+  // path /HotelOverLookJavaFX/src/main/resources/student.xml
+  $.get(
+    "/HotelOverLookJavaFX/src/main/resources/student.xml",
+    function (xml, status) {
+      var document = $(xml);
+      guest = document.find("guest").each(function () {
+        console.log($(this).find("name").text());
+      });
+    }
+  );
+}
+
+//Check if 2 dates are overlapping (date must be an object with check-in as start date and check-out as ending date)
+function isOverlapping(date1, date2) {
+  date1Start = date1.checkIn;
+  date1End = date1.checkOut;
+
+  date2Start = date2.checkIn;
+  date2End = date2.checkOut;
+
+  if (!(date1End >= date2Start && date1Start <= date2End)) {
+    console.log("not overlapping");
+    return false;
+  } else console.log("Overlapping");
+  return true;
+}
+
+function checkBooking() {
+  isOverlapping(UserInput, date2);
+}
