@@ -1,11 +1,21 @@
 package com.example.hoteloverlookjavafx.Models;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "room")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Room {
     private int number;
     private float price;
     private String type;
     private int beds;
     private int bedRooms;
+
+    public Room(){
+
+    }
 
     //basic constructor
     public Room(int n, float p, String t, int b, int bR){

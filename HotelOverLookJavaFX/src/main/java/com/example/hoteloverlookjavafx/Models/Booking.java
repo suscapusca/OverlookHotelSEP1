@@ -21,40 +21,41 @@ public class Booking {
     private String state;
     @XmlElement(name = "extra")
     private Extra extra;
-    private enum stateEnum{
-        PENDING,
-        BOOKED,
-        ARRIVED,
-        CLOSED
-    };
+
+    public Booking(){
+
+    }
 
     //basic constructor
-    public Booking(Guest g, DateInterval dI, Room r, int guests, String state){
+    public Booking(Guest g, DateInterval dI, Room r, int guests,String eI, String state){
         this.guest = g;
         this.dateInterval = dI;
         this.room = r;
+        this.extraInfo = eI;
         this.guests = guests;
         this.state = state;
     }
 
     //constructor with extra info
-    public Booking(Guest g, DateInterval dI, Room r, int guests, String eI, String state){
+    public Booking(Guest g, DateInterval dI, Room r, int guests, String eI, String state, Extra extra){
         this.guest = g;
         this.dateInterval = dI;
         this.room = r;
         this.guests = guests;
         this.extraInfo = eI;
         this.state = state;
+        this.extra = extra;
     }
 
     //function to update Booking
-    public void updateBooking(Guest g, DateInterval dI, Room r, int guests, String eI, String state){
+    public void updateBooking(Guest g, DateInterval dI, Room r, int guests, String eI, String state, Extra extra){
         this.guest = g;
         this.dateInterval = dI;
         this.room = r;
         this.guests = guests;
         this.extraInfo = eI;
         this.state = state;
+        this.extra = extra;
     }
 
     public Guest getGuest() {
