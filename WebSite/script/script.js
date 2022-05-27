@@ -23,16 +23,21 @@ const weekName = [
   "Saturday",
 ];
 
-const d = new Date();
+const today = new Date();
 const tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
 
-let UserInput = {
-  "check-in": d,
-  "check-out": tomorrow,
+const UserInput = {
+  checkIn: today,
+  checkOut: tomorrow,
 };
-let startDate = d;
-let endDate;
+
+var date2 = {
+  checkIn: today,
+  checkOut: tomorrow,
+};
+
+const Rooms = {};
 
 function changeStartDate(event) {
   let d = new Date(event.target.value);
@@ -42,10 +47,10 @@ function changeStartDate(event) {
   if (Date.parse(d) < Date.parse(dYesterday)) {
     alert("CHOSE A DATE AFTER TODAY'S DATE");
   } else {
-    if (Date.parse(endDate) < Date.parse(d)) {
+    if (Date.parse(UserInput.checkOut) < Date.parse(d)) {
       alert("CHOSE A CHECK-OUT DATE AFTER THE CHECK-IN ");
     } else {
-      startDate = d;
+      UserInput.checkIn = d;
       $(".today-date").html(
         `<h4 class="fs-6 text-blue">` +
           weekName[d.getDay()] +
@@ -62,11 +67,11 @@ function changeStartDate(event) {
 function changeEndDate(event) {
   let d = new Date(event.target.value);
 
-  if (Date.parse(d) < Date.parse(startDate)) {
-    console.log(d, " a  ", startDate);
+  if (Date.parse(d) < Date.parse(UserInput.checkIn)) {
+    console.log(d, " a  ", UserInput.checkIn);
     alert("CHOSE A DATE AFTER TODAY'S DATE");
   } else {
-    endDate = d;
+    UserInput.checkOut = d;
     $(".tomorrow-date").html(
       `<h4 class="fs-6 text-blue">` +
         weekName[d.getDay()] +
@@ -82,11 +87,11 @@ function changeEndDate(event) {
 function setBaseDates() {
   $(".today-date").append(
     `<h4 class="fs-6 text-blue">` +
-      weekName[d.getDay()] +
+      weekName[today.getDay()] +
       `</h4>
     <p class="fs-3">` +
-      d.getDate() +
-      monthNames[d.getMonth()] +
+      today.getDate() +
+      monthNames[today.getMonth()] +
       `</p>`
   );
 
@@ -111,6 +116,7 @@ $("#start-date").click(function () {
 
 $(document).ready(function () {
   setBaseDates();
+  getXmlFile();
 });
 
 function getBooking() {
@@ -143,4 +149,24 @@ function isOverlapping(date1, date2) {
 
 function checkBooking() {
   isOverlapping(UserInput, date2);
+}
+
+function getXmlFile() {
+  $.get(
+    "/HotelOverLookJavaFX/src/main/resources/student.xml",
+    function (xml, status) {
+      let myXml = $(xml);
+      let room = myXml.find("room");
+      console.log(room.text());
+      room.each(function () {
+        let year = $(this).find("year").text();
+        let month = $(this).find("month").text();
+        let day = $(this).find("day").text();
+
+        let d = new Date(year + "-" + month + "-" + day);
+        console.log(d);
+        console.log(year + "-" + month + "-" + day);
+      });
+    }
+  );
 }

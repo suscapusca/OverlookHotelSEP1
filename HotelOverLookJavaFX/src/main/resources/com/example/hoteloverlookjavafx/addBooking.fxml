@@ -21,7 +21,7 @@
             </Button>
          </children>
       </Pane>
-      <Button layoutX="763.0" layoutY="519.0" mnemonicParsing="false" onAction="#addBooking" prefHeight="36.0" prefWidth="67.0" text="Create">
+      <Button layoutX="763.0" layoutY="519.0" mnemonicParsing="false" onAction="#addGuest" prefHeight="36.0" prefWidth="67.0" text="Create">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>

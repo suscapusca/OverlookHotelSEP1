@@ -41,6 +41,7 @@ public class BookingController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        /*
 
         JAXBContext jaxbContext = null;
         try {
@@ -51,38 +52,31 @@ public class BookingController implements Initializable {
         File file = new File("src\\main\\resources\\bookings.xml");
         Unmarshaller unmarshaller = null;
         try {
-            if (jaxbContext != null) {
-                unmarshaller = jaxbContext.createUnmarshaller();
-            }
+            unmarshaller = jaxbContext.createUnmarshaller();
         } catch (JAXBException e) {
             e.printStackTrace();
         }
 
         try {
-            if (unmarshaller != null) {
-                bookings = (BookingList) unmarshaller.unmarshal(file);
-            }
+             bookings = (BookingList) unmarshaller.unmarshal(file);
         } catch (JAXBException e) {
             e.printStackTrace();
         }
 
         ObservableList<Booking> oL = FXCollections.observableArrayList();
-        if(bookings!=null) {
-            oL.addAll(bookings.getAllBookings());
-            table.getItems().addAll(oL);
-        }
+        oL.addAll(bookings.getAllBookings());
         guestColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(features.getValue().getGuest().getName()));
-        roomColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(String.valueOf(features.getValue().getRoom().getNumber())));
+        roomColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(String.valueOf(features.getValue().getRoom())));
         arrivalColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(String.valueOf(features.getValue().getDateInterval().getStartDate())));
         departureColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(String.valueOf(features.getValue().getDateInterval().getEndDate())));
         guestsColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(String.valueOf(features.getValue().getGuests())));
         extraColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(features.getValue().getExtraInfo()));
         stateColumn.setCellValueFactory(features-> new ReadOnlyStringWrapper(features.getValue().getState()));
-
+        table.getItems().addAll(oL);*/
     }
 
     public BookingController(){
-        JAXBContext jaxbContext = null;
+        /*JAXBContext jaxbContext = null;
         try {
             jaxbContext = JAXBContext.newInstance(BookingList.class);
         } catch (JAXBException e) {
@@ -91,20 +85,16 @@ public class BookingController implements Initializable {
         File file = new File("src\\main\\resources\\bookings.xml");
         Unmarshaller unmarshaller = null;
         try {
-            if (jaxbContext != null) {
-                unmarshaller = jaxbContext.createUnmarshaller();
-            }
+            unmarshaller = jaxbContext.createUnmarshaller();
         } catch (JAXBException e) {
             e.printStackTrace();
         }
 
         try {
-            if (unmarshaller != null) {
-                bookings = (BookingList) unmarshaller.unmarshal(file);
-            }
+            bookings = (BookingList) unmarshaller.unmarshal(file);
         } catch (JAXBException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     //Change to Home view

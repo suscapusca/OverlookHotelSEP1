@@ -1,21 +1,9 @@
 package com.example.hoteloverlookjavafx.Models;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement(name = "dateInterval")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class DateInterval {
-    @XmlElement(name = "arriveDate")
     private Date startDate;
-    @XmlElement(name = "departureDate")
     private Date endDate;
 
-    public DateInterval(){
-
-    }
     //constructor if you know the departure date
     public DateInterval(Date sD, Date eD ){
         this.startDate = sD.copy();

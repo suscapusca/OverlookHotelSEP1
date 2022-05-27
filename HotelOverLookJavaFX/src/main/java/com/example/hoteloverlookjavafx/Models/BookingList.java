@@ -11,7 +11,7 @@ import java.util.ArrayList;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BookingList {
     @XmlElement(name = "booking")
-    public ArrayList<Booking> bookings;
+    private ArrayList<Booking> bookings;
 
     public BookingList(){
         bookings = new ArrayList<>();
