@@ -1,8 +1,6 @@
 package com.example.hoteloverlookjavafx.Controllers;
 
-import com.example.hoteloverlookjavafx.Models.Date;
-import com.example.hoteloverlookjavafx.Models.Guest;
-import com.example.hoteloverlookjavafx.Models.GuestList;
+import com.example.hoteloverlookjavafx.Models.*;
 import com.example.hoteloverlookjavafx.OverLookApplication;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
@@ -32,24 +30,24 @@ public class GuestController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    private GuestList guests;
-
-    @FXML TableColumn<Guest, String> birthdayColumn;
-    @FXML TableColumn<Guest, String> nameColumn;
-    @FXML TableColumn<Guest, String> phoneColumn;
-    @FXML TableColumn<Guest, String> addressColumn;
-    @FXML TableColumn<Guest, String> nationalityColumn;
-    @FXML TableView<Guest> table;
+    private BookingList bookings;
+    @FXML TableColumn<Booking, String> idColumn;
+    @FXML TableColumn<Booking, String> nameColumn;
+    @FXML TableColumn<Booking, String> arrivalColumn;
+    @FXML TableColumn<Booking, String> departureColumn;
+    @FXML TableColumn<Booking, String> phoneColumn;
+    @FXML TableColumn<Booking, String> roomColumn;
+    @FXML TableView<Booking> table;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         JAXBContext jaxbContext = null;
         try {
-            jaxbContext = JAXBContext.newInstance(GuestList.class);
+            jaxbContext = JAXBContext.newInstance(BookingList.class);
         } catch (JAXBException e) {
             e.printStackTrace();
         }
-        File file = new File("src\\main\\resources\\student.xml");
+        File file = new File("src\\main\\resources\\bookings.xml");
         Unmarshaller unmarshaller = null;
         try {
             unmarshaller = jaxbContext.createUnmarshaller();
@@ -58,29 +56,31 @@ public class GuestController implements Initializable {
         }
 
         try {
-            guests = (GuestList) unmarshaller.unmarshal(file);
+            bookings = (BookingList) unmarshaller.unmarshal(file);
         } catch (JAXBException e) {
             e.printStackTrace();
         }
 
-        ObservableList<Guest> oL = FXCollections.observableArrayList();
-        oL.addAll(guests.getAllGuest());
-        nameColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(features.getValue().getName()));
-        phoneColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(features.getValue().getPhone()));
-        addressColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(features.getValue().getAddress()));
-        nationalityColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(features.getValue().getNationality()));
-        birthdayColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(features.getValue().getBirthday().toString()));
+        ObservableList<Booking> oL = FXCollections.observableArrayList();
+        oL.addAll(bookings.getAllBookingsCheckIn());
+        idColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(String.valueOf(features.getValue().getId())));
+        nameColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(features.getValue().getGuest().getName()));
+        arrivalColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(features.getValue().getDateInterval().getStartDate().toString()));
+        departureColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(features.getValue().getDateInterval().getEndDate().toString()));
+        phoneColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(features.getValue().getGuest().getPhone()));
+        roomColumn.setCellValueFactory(features -> new ReadOnlyStringWrapper(features.getValue().getRoom().getType()));
+
         table.getItems().addAll(oL);
     }
-
+    //name phone room
     public GuestController(){
         JAXBContext jaxbContext = null;
         try {
-            jaxbContext = JAXBContext.newInstance(GuestList.class);
+            jaxbContext = JAXBContext.newInstance(BookingList.class);
         } catch (JAXBException e) {
             e.printStackTrace();
         }
-        File file = new File("src\\main\\resources\\student.xml");
+        File file = new File("src\\main\\resources\\bookings.xml");
         Unmarshaller unmarshaller = null;
         try {
             unmarshaller = jaxbContext.createUnmarshaller();
@@ -89,7 +89,7 @@ public class GuestController implements Initializable {
         }
 
         try {
-            guests = (GuestList) unmarshaller.unmarshal(file);
+            bookings = (BookingList) unmarshaller.unmarshal(file);
         } catch (JAXBException e) {
             e.printStackTrace();
         }
