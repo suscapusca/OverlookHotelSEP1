@@ -26,7 +26,7 @@
             </Button>
          </children>
       </Pane>
-      <TableView fx:id="table" layoutY="109.0" prefHeight="461.0" prefWidth="845.0">
+      <TableView layoutY="109.0" fx:id="table" prefHeight="461.0" prefWidth="845.0">
         <columns>
           <TableColumn fx:id="guestColumn" prefWidth="196.59999084472656" text="Guest" />
           <TableColumn fx:id="roomColumn" minWidth="6.20001220703125" prefWidth="69.80001831054688" text="Room Nº" />
@@ -35,7 +35,6 @@
             <TableColumn fx:id="guestsColumn" prefWidth="71.79998779296875" text="Nº Guests" />
             <TableColumn fx:id="extraColumn" prefWidth="216.4000244140625" text="Extra information" />
             <TableColumn fx:id="stateColumn" prefWidth="108.80001220703127" text="State" />
-            <TableColumn fx:id="idColumn" prefWidth="75.0" visible="false" />
         </columns>
       </TableView>
    </children>

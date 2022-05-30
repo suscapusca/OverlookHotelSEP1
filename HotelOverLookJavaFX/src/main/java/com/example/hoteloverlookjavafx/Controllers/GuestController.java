@@ -52,17 +52,13 @@ public class GuestController implements Initializable {
         File file = new File("src\\main\\resources\\student.xml");
         Unmarshaller unmarshaller = null;
         try {
-            if (jaxbContext != null) {
-                unmarshaller = jaxbContext.createUnmarshaller();
-            }
+            unmarshaller = jaxbContext.createUnmarshaller();
         } catch (JAXBException e) {
             e.printStackTrace();
         }
 
         try {
-            if (unmarshaller != null) {
-                guests = (GuestList) unmarshaller.unmarshal(file);
-            }
+            guests = (GuestList) unmarshaller.unmarshal(file);
         } catch (JAXBException e) {
             e.printStackTrace();
         }
