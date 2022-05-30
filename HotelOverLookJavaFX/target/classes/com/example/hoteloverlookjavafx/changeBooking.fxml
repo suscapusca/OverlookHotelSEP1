@@ -9,7 +9,7 @@
    <children>
       <Pane layoutX="-10.0" layoutY="-1.0" prefHeight="109.0" prefWidth="854.0" style="-fx-background-color: #33ccff;">
          <children>
-            <Label layoutX="280.0" layoutY="26.0" text="New Booking" textAlignment="CENTER" textFill="WHITE">
+            <Label layoutX="246.0" layoutY="26.0" prefHeight="58.0" prefWidth="363.0" text="Update Booking" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arial Italic" size="50.0" />
                </font>
@@ -21,7 +21,7 @@
             </Button>
          </children>
       </Pane>
-      <Button layoutX="763.0" layoutY="519.0" mnemonicParsing="false" onAction="#addBooking" prefHeight="36.0" prefWidth="67.0" text="Create">
+      <Button layoutX="763.0" layoutY="519.0" mnemonicParsing="false" onAction="#changeBooking" prefHeight="36.0" prefWidth="67.0" text="Update">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
@@ -31,31 +31,31 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="nameField" layoutX="88.0" layoutY="149.0" />
+      <TextField fx:id="nameField1" layoutX="88.0" layoutY="149.0" />
       <Label layoutX="37.0" layoutY="189.0" prefHeight="26.0" prefWidth="50.0" text="Phone:">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="phoneField" layoutX="88.0" layoutY="190.0" />
+      <TextField fx:id="phoneField1" layoutX="88.0" layoutY="190.0" />
       <Label layoutX="37.0" layoutY="229.0" prefHeight="26.0" prefWidth="59.0" text="Birthday:">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <DatePicker fx:id="birthdayField" layoutX="96.0" layoutY="229.0" prefHeight="27.0" prefWidth="142.0" />
+      <DatePicker fx:id="birthdayField1" layoutX="96.0" layoutY="229.0" prefHeight="27.0" prefWidth="142.0" />
       <Label layoutX="37.0" layoutY="268.0" text="Address:">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="addressField" layoutX="96.0" layoutY="266.0" prefHeight="27.0" prefWidth="142.0" />
+      <TextField fx:id="addressField1" layoutX="96.0" layoutY="266.0" prefHeight="27.0" prefWidth="142.0" />
       <Label layoutX="37.0" layoutY="305.0" text="Nationality:">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="nationalityField" layoutX="113.0" layoutY="303.0" prefHeight="26.0" prefWidth="123.0" />
+      <TextField fx:id="nationalityField1" layoutX="113.0" layoutY="303.0" prefHeight="26.0" prefWidth="123.0" />
       <Label layoutX="291.0" layoutY="151.0" prefHeight="22.0" prefWidth="48.0" text="Arrival:">
          <font>
             <Font size="15.0" />
@@ -66,26 +66,26 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <DatePicker fx:id="arrivalField" layoutX="340.0" layoutY="149.0" prefHeight="26.0" prefWidth="185.0" />
-      <DatePicker fx:id="departureField" layoutX="363.0" layoutY="190.0" prefHeight="26.0" prefWidth="162.0" />
+      <DatePicker fx:id="arrivalField1" layoutX="340.0" layoutY="149.0" prefHeight="26.0" prefWidth="185.0" />
+      <DatePicker fx:id="departureField1" layoutX="363.0" layoutY="190.0" prefHeight="26.0" prefWidth="162.0" />
       <Label layoutX="291.0" layoutY="231.0" text="Nº Guests:">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="guestsField" layoutX="364.0" layoutY="229.0" prefHeight="26.0" prefWidth="162.0" />
+      <TextField fx:id="guestsField1" layoutX="364.0" layoutY="229.0" prefHeight="26.0" prefWidth="162.0" />
       <Label layoutX="34.0" layoutY="369.0" text="Extra Information about the booking">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextArea fx:id="extraInfoField" layoutX="36.0" layoutY="392.0" prefHeight="163.0" prefWidth="507.0" />
+      <TextArea fx:id="extraInfoField1" layoutX="36.0" layoutY="392.0" prefHeight="163.0" prefWidth="507.0" />
       <Label layoutX="291.0" layoutY="270.0" text="State">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="stateBox" layoutX="333.0" layoutY="268.0" prefHeight="26.0" prefWidth="193.0" />
+      <ChoiceBox fx:id="stateBox1" layoutX="333.0" layoutY="268.0" prefHeight="26.0" prefWidth="193.0" />
       <Label layoutX="131.0" layoutY="116.0" text="Guest">
          <font>
             <Font name="System Bold Italic" size="18.0" />
@@ -96,8 +96,8 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="stateRoom" layoutX="333.0" layoutY="305.0" prefHeight="26.0" prefWidth="194.0" />
-      <CheckBox fx:id="extrasCheck" layoutX="567.0" layoutY="117.0" mnemonicParsing="false" onAction="#clickExtras" text="Extras">
+      <ChoiceBox fx:id="stateRoom1" layoutX="333.0" layoutY="305.0" prefHeight="26.0" prefWidth="194.0" />
+      <CheckBox fx:id="extrasCheck1" layoutX="567.0" layoutY="117.0" mnemonicParsing="false" onAction="#clickExtras1" text="Extras">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
@@ -109,12 +109,12 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextArea fx:id="extrasField" disable="true" layoutX="567.0" layoutY="179.0" prefHeight="200.0" prefWidth="269.0" />
+      <TextArea fx:id="extrasField1" disable="true" layoutX="567.0" layoutY="179.0" prefHeight="200.0" prefWidth="269.0" />
       <Label layoutX="567.0" layoutY="392.0" prefHeight="22.0" prefWidth="85.0" text="Extras price:">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="priceField" disable="true" layoutX="648.0" layoutY="391.0" prefHeight="22.0" prefWidth="86.0" />
+      <TextField fx:id="priceField1" disable="true" layoutX="648.0" layoutY="391.0" prefHeight="22.0" prefWidth="86.0" />
    </children>
 </AnchorPane>

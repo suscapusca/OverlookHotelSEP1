@@ -10,6 +10,10 @@ public class Extra {
     private float priceExtra;
     private String extras;
 
+    public Extra(){
+
+    }
+
     //basic constructor
     public Extra(float eB, String eS){
         this.priceExtra = eB;

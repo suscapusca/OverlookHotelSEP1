@@ -5,9 +5,13 @@ import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 @XmlRootElement(name = "booking")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Booking {
+    @XmlElement(name = "id")
+    private int id;
     @XmlElement(name = "guest")
     private Guest guest;
     @XmlElement(name = "dateInterval")
@@ -21,40 +25,41 @@ public class Booking {
     private String state;
     @XmlElement(name = "extra")
     private Extra extra;
-    private enum stateEnum{
-        PENDING,
-        BOOKED,
-        ARRIVED,
-        CLOSED
-    };
+
+    public Booking(){
+
+    }
 
     //basic constructor
-    public Booking(Guest g, DateInterval dI, Room r, int guests, String state){
+    public Booking(Guest g, DateInterval dI, Room r, int guests,String eI, String state){
         this.guest = g;
         this.dateInterval = dI;
         this.room = r;
+        this.extraInfo = eI;
         this.guests = guests;
         this.state = state;
     }
 
     //constructor with extra info
-    public Booking(Guest g, DateInterval dI, Room r, int guests, String eI, String state){
+    public Booking(Guest g, DateInterval dI, Room r, int guests, String eI, String state, Extra extra){
         this.guest = g;
         this.dateInterval = dI;
         this.room = r;
         this.guests = guests;
         this.extraInfo = eI;
         this.state = state;
+        this.extra = extra;
     }
 
     //function to update Booking
-    public void updateBooking(Guest g, DateInterval dI, Room r, int guests, String eI, String state){
+    public void updateBooking(Guest g, DateInterval dI, Room r, int guests, String eI, String state, Extra extra){
         this.guest = g;
         this.dateInterval = dI;
         this.room = r;
         this.guests = guests;
         this.extraInfo = eI;
         this.state = state;
+        this.extra = extra;
     }
 
     public Guest getGuest() {
@@ -127,5 +132,13 @@ public class Booking {
 
     public void setExtra(Extra extra) {
         this.extra = extra;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
